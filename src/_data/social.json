@@ -1,0 +1,9 @@
+{
+	"networks": [{
+			"name": "Twitter",
+			"username": "user",
+			"title": "Follow me on twitter",
+			"icon": "fab fa-twitter",
+			"url": "https://www.twitter.com/user"
+	}]
+}

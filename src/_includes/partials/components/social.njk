@@ -1,0 +1,24 @@
+{% if social.networks %}
+<ul class="nav-links">
+{% for item in social.networks %}
+	{% set relAttribute = '' %}
+
+	{% if item.rel %}
+		{% set relAttribute = ' rel="' + item.rel + '"' %}
+	{% endif %}
+
+	{% if item.title %}
+		{% set titleAtribute = ' title="' + item.title + '"' %}
+	{% endif %}
+
+	<li class="nav-link">
+		<a href="{{ item.url }}" target="_blank" {{ titleAttribute | safe }}{{ relAttribute | safe }}>
+			{% if item.icon %}
+				<i class="{{ item.icon }}"></i>
+			{% endif %}
+			{{ item.name }}
+		</a>
+	</li>
+{% endfor %}
+</ul>
+{% endif %}

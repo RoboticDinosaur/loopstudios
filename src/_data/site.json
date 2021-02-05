@@ -1,0 +1,10 @@
+{
+	"name": "Groundwork",
+	"shortDescription": "",
+	"url": "https://localhost",
+	"analytics": {
+		"enabled": true,
+		"gaid": "xxxxxx"
+	},
+	"maxPostsPerPage": 10
+}

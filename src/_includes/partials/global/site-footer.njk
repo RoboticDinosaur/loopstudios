@@ -1,0 +1,21 @@
+<footer id="site-footer" role="contentinfo">
+	<div class="wrapper">
+		<div class="site-footer__inner">
+			{% if site.shortDescription %}
+			<article class="site-footer__details">
+				<h2>{{ site.name }} </a>
+				{{ site.shortDescription | markdownFilter | safe }}
+			</article>
+			{% endif %}
+
+			{% set ariaLabel = 'footer navigation' %}
+			{% include 'partials/components/nav.njk'%}
+		</div>
+		<div class="site-footer__social">
+			{% include 'partials/components/social.njk' %}
+		</div>
+		<p class="site-footer_credit">
+			&copy; {{ global.now | yearFilter }} {{ site.name }}.  All rights reserved.
+		</p>
+	</div>
+</footer>

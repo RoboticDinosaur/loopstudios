@@ -1,0 +1,14 @@
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+	<main id="main-content" tabindex="-1">
+		<article class="post">
+			{% include "partials/components/intro.njk" %}
+			<div class="post__body inner-wrapper">
+				{{ content | safe }}
+			</div>
+		</article>
+	</main>
+{% endblock %}
+
+{{ content | safe }}

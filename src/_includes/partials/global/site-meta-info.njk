@@ -1,0 +1,46 @@
+{% set pageTitle = title + ' - ' + site.name %}
+{% set siteTitle = site.name %}
+{% set currentUrl = site.url + page.url %}
+
+{% if metaTitle %}
+	{% set pageTitle = metaTitle %}
+{% endif %}
+
+<title>{{ pageTitle }}</title>
+<link rel="canonical" href="{{ currentUrl }}" />
+
+<meta property="og:site_name" content="{{ siteTitle }}" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ currentUrl }}" />
+
+<meta name="twitter:title" content="{{ pageTitle }}" />
+
+{% for item in social.networks %}
+	{% if item.name === 'Twitter' %}
+		<meta name="twitter:creator" content="@{{ item.username }}">
+	{% endif %}
+{% endfor %}
+
+
+{% if metaDescription %}
+	<meta name="description" content="{{ metaDescription }}" />
+	<meta name="twitter:description" content="{{ metaDescription }}" />
+	<meta property="og:description" content="{{ metaDescription }}" />
+{% endif %}
+
+{%- set socialImage %}
+	{{ site.url }}/previews/{% if pageTitle %}{{ pageTitle | slug }}{% else %}home{% endif %}.png
+{% endset -%}
+
+
+{% if socialImage %}
+  <meta property="og:image" content="{{ socialImage }}" />
+  <meta name="twitter:image" content="{{ socialImage }}" />
+  <meta property="og:image:alt" content="Page image for {{ pageTitle }}" />
+  <meta name="twitter:image:alt" content="Page image for {{ pageTitle }}" />
+{% endif %}
+
+{% if site.paymentPointer %}
+  <meta name="monetization" content="{{ site.paymentPointer }}" />
+{% endif %}

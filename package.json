@@ -1,0 +1,60 @@
+{
+  "name": "Groundwork",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:postcss": "postcss src/css/style.css --no-map -o public/css/style.css -w",
+    "watch:eleventy": "eleventy --serve",
+    "build:postcss-site": "postcss src/css/style.css --no-map -o public/css/style.css",
+    "build:postcss-social": "postcss src/css/social.css --no-map -o social/style.css",
+    "build:postcss": "npm-run-all --parallel build:postcss-site",
+    "build:eleventy": "eleventy",
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r",
+    "start": "cross-env ELEVENTY_ENV=dev npm-run-all build:postcss --parallel watch:*",
+    "build": "cross-env ELEVENTY_ENV=prod npm-run-all build:postcss build:eleventy social-images",
+    "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
+    "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
+    "social-images": "eleventy-social-images --outputDir public --dataFile social/pages.json --templatePath social/template.html",
+    "bump": "npm --no-git-tag-version version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roboticdinosaur/groundwork.git"
+  },
+  "keywords": [],
+  "author": "Robert Forbes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roboticdinosaur/groundwork/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@11tyrocks/eleventy-plugin-social-images": "^0.1.1",
+    "autoprefixer": "^9.8.6",
+    "cross-env": "^7.0.2",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "emoji-regex": "^9.0.0",
+    "luxon": "^1.25.0",
+    "markdown-it": "^11.0.0",
+    "markdown-it-anchor": "^5.2.7",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.2",
+    "postcss-import": "^12.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.26.10",
+    "stylelint": "^13.7.0",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-selector-bem-pattern": "^2.1.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
