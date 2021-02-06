@@ -1,10 +1,11 @@
 {
-	"name": "Groundwork",
+	"name": "loopstudios",
+	"logo": "logo.svg",
 	"shortDescription": "",
 	"url": "https://localhost",
 	"analytics": {
 		"enabled": true,
 		"gaid": "xxxxxx"
 	},
-	"maxPostsPerPage": 10
+	"maxProjectsPerPage": 10
 }

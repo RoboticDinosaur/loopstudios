@@ -1,9 +1,16 @@
 <header class="site-header" role="banner">
 	<div class="wrapper">
-		<div class="site-header__inner">
+		<div class="site-header__inner navbar">
 			<a href="/" class="site-header__site-name">
-				{{ site.name }}
+				<img src="/img/logo.svg" alt="loopstudios"/>
 			</a>
+
+			<input type="checkbox" id="site-navigation-check" class="nav__check" name="nav-check" aria-labelledby="site-navigation-toggle" aria-hidden="true">
+
+			<label for="site-navigation-check" id="site-navigation-toggle" class="nav__toggle" aria-controls="site-navigation-links" aria-expanded="false" aria-label="Toggles site navigation">
+				<img src="/img/icon-hamburger.svg" />
+			</label>
+
 			{% set arialLabel = 'navigation' %}
 			{% include "partials/components/nav.njk" %}
 		</div>

@@ -1,11 +1,16 @@
 ---
 layout: 'layouts/home.njk'
-title: 'Groundwork Template'
-postsHeading: 'Latest blog posts'
-archiveButtonText: 'See all posts'
+title: 'Immersive Experiences That Deliver'
+projectsHeading: 'Our Creations'
+archiveButtonText: 'See All'
 metaTitle: 'Home page of Bedrock Template'
 metaDescription: 'Starter template for side projects to get up and running fast'
-image: ''
+coverImage: '/img/desktop/image-hero.jpg'
+coverCaption: ''
 ---
 
-Welcome to the starter template.  This has the structure near enough completed but no styles have been implemented yet.
+![Image of interactive VR](/img/desktop/image-interactive.jpg)
+
+## The Leader in interactive VR
+
+Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.

@@ -1,9 +1,33 @@
 {
-	"networks": [{
+	"networks": [
+		{
+			"name": "Facebook",
+			"username": "RoboticDinosaur",
+			"title": "Follow me on Facebook",
+			"icon": "/img/icon-facebook.svg",
+			"url": "https://www.facebook.com/roboticdinosaur"
+
+		},
+		{
 			"name": "Twitter",
-			"username": "user",
+			"username": "RoboticDinosaur",
 			"title": "Follow me on twitter",
-			"icon": "fab fa-twitter",
-			"url": "https://www.twitter.com/user"
-	}]
+			"icon": "/img/icon-twitter.svg",
+			"url": "https://www.twitter.com/roboticdinosaur"
+		},
+		{
+			"name": "Pinterest",
+			"username": "RoboticDinosaur",
+			"title": "Follow me on Pinterest",
+			"icon": "/img/icon-pinterest.svg",
+			"url": "https://www.pinterest.com/roboticdinosaur"
+		},
+		{
+			"name": "Instagram",
+			"username": "RoboticDinosaur",
+			"title": "Follow me on Instagram",
+			"icon": "/img/icon-instagram.svg",
+			"url": "https://www.instagram.com/roboticdinosaur"
+		}
+	]
 }

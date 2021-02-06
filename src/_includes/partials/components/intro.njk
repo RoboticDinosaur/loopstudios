@@ -1,9 +1,7 @@
 <header class="intro {{ 'intro--with-cover' }}">
 	{% if coverImage %}
 	<figure class="cover-image">
-		<div class="cover-image__frame">
-			<img src="{{ coverImage }}" alt="{{ coverCaption }}" class="cover-image__img">
-		</div>
+		<img src="{{ coverImage }}" alt="{{ coverCaption }}" class="cover-image__img">
 		{% if coverCaption %}<figcaption>{{ coverCaption | safe }}</figcaption>{% endif %}
 	</figure>
 	{% endif %}

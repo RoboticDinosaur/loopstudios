@@ -1,5 +1,5 @@
 {% if social.networks %}
-<ul class="nav-links">
+<ul class="social__list">
 {% for item in social.networks %}
 	{% set relAttribute = '' %}
 
@@ -11,12 +11,11 @@
 		{% set titleAtribute = ' title="' + item.title + '"' %}
 	{% endif %}
 
-	<li class="nav-link">
+	<li class="social__item">
 		<a href="{{ item.url }}" target="_blank" {{ titleAttribute | safe }}{{ relAttribute | safe }}>
 			{% if item.icon %}
-				<i class="{{ item.icon }}"></i>
+				<img src="{{ item.icon }}" />
 			{% endif %}
-			{{ item.name }}
 		</a>
 	</li>
 {% endfor %}

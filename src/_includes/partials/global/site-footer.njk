@@ -1,11 +1,13 @@
-<footer id="site-footer" role="contentinfo">
-	<div class="wrapper">
+<footer class="site-footer" role="contentinfo">
+	<div class="inner-wrapper">
 		<div class="site-footer__inner">
 			{% if site.shortDescription %}
 			<article class="site-footer__details">
 				<h2>{{ site.name }} </a>
 				{{ site.shortDescription | markdownFilter | safe }}
 			</article>
+			{% else %}
+				<img class="site-footer__logo" src="/img/{{ site.logo }}" />
 			{% endif %}
 
 			{% set ariaLabel = 'footer navigation' %}
@@ -13,9 +15,9 @@
 		</div>
 		<div class="site-footer__social">
 			{% include 'partials/components/social.njk' %}
+			<p class="site-footer__credit">
+				&copy; {{ global.now | yearFilter }} {{ site.name }}.  All rights reserved.
+			</p>
 		</div>
-		<p class="site-footer_credit">
-			&copy; {{ global.now | yearFilter }} {{ site.name }}.  All rights reserved.
-		</p>
 	</div>
 </footer>

@@ -52,20 +52,20 @@ module.exports = function (eleventyConfig) {
 	const now = new Date();
 
 	// Custom collections
-	const livePosts = (post) => post.date <= now && !post.data.draft;
-	eleventyConfig.addCollection('posts', (collection) => {
+	const liveProjects = (project) => project.date <= now && !project.data.draft;
+	eleventyConfig.addCollection('projects', (collection) => {
 		return [
-			...collection.getFilteredByGlob('./src/posts/**/*.md')
-			.filter(livePosts)
+			...collection.getFilteredByGlob('./src/projects/**/*.md')
+			.filter(liveProjects)
 		].reverse();
 	})
 
-	eleventyConfig.addCollection('postFeed', (collection) => {
+	eleventyConfig.addCollection('projectFeed', (collection) => {
 		return [
-			...collection.getFilteredByGlob('./src/posts/**/*.md')
-			.filter(livePosts)
+			...collection.getFilteredByGlob('./src/projects/**/*.md')
+			.filter(liveProjects)
 		].reverse()
-		.slice(0, site.maxPostsPerPage);
+		.slice(0, site.maxProjectsPerPage);
 	})
 
 

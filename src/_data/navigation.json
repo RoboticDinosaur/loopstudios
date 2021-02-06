@@ -1,13 +1,28 @@
 {
 	"items": [
 		{
-			"text": "Home",
-			"url": "/",
+			"text": "About",
+			"url": "#",
 			"external": false
 		},
 		{
-			"text": "About",
-			"url": "/about",
+			"text": "Careers",
+			"url": "#",
+			"external": false
+		},
+		{
+			"text": "Events",
+			"url": "#",
+			"external": false
+		},
+		{
+			"text": "Productes",
+			"url": "#",
+			"external": false
+		},
+		{
+			"text": "Support",
+			"url": "#",
 			"external": false
 		}
 	]

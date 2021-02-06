@@ -1,0 +1,28 @@
+{% if projectListItems.length %}
+	<section class="project-list">
+		<div class="inner-wrapper">
+			<h2 class="project-list__heading">{{ projectListHeading }}</h2>
+			<ul class="project-list__items" reversed>
+				{% for item in projectListItems %}
+					{% if item.date.getTime() <= global.now %}
+						<li class="project-list__item">
+							<figure class="item-image">
+								<picture>
+									<source media="(min-width: 1440px)" srcset="/img/desktop/{{ item.data.coverImage }}">
+									<img src="/img/mobile/{{ item.data.coverImage }}" />
+
+								</picture>
+							</figure>
+							<div class="item-heading">
+								<a href="{{ item.url }}" class="project-list__item-link" rel="bookmark">
+									<h3>{{ item.data.title }}</h3>
+								</a>
+							</div>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ol>
+		</div>
+		{% include 'partials/components/pagination.njk' %}
+	</section>
+{% endif %}

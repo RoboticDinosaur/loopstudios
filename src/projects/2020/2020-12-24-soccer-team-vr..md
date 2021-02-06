@@ -1,11 +1,11 @@
 ---
-title: Iaculum et teli ex hunc coniugis
+title: Soccer Team VR
 subtitle: Eras cum ora prohibente occuluitque, quod suoque non.
 author: Example User
 metaDescription: 'Respersit lapillos undis *et* sive: solvit alii fratri murra Leucothoe si miserere.'
-date: 2021-02-05T11:00:00+00:00
+date: 2020-12-24T11:00:00+00:00
 tags: [sample, writing, blog]
-coverImage: ''
+coverImage: 'image-soccer-team.jpg'
 coverCaption: ''
 ---
 

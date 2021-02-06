@@ -1,26 +1,26 @@
 {% extends 'layouts/base.njk' %}
 
-{# Intro conent #}
+{# Intro content #}
 {% set introHeading = title %}
-{% set introSummary %}
-	{{ content | safe }}
-{% endset %}
+{% set introSummary = '' %}
 
 {# Post list content #}
-{% set postListHeading = postsHeading %}
-{% set postListItems = collections.postFeed %}
+{% set projectListHeading = projectsHeading %}
+{% set projectListItems = collections.projectFeed %}
 
 {# Archive link #}
-{% if postListItems.length < collections.posts.length %}
-	{% set paginationNextText = archiveButtonText %}
-	{% set paginationNextUrl = '/blog' %}
-{% endif %}
+{% set paginationNextText = archiveButtonText %}
+{% set paginationNextUrl = '/blog' %}
 
 {% block content %}
-	<main if="main-content" tabindex="-1">
+	<main id="main-content" tabindex="-1">
 		{% include 'partials/components/intro.njk' %}
-		{% include 'partials/components/post-list.njk' %}
-		{% include 'partials/components/pagination.njk' %}
+		<section class="intro-text">
+			<div class="inner-wrapper">
+				{{ content | safe }}
+			</div>
+		</section>
+		{% include 'partials/components/project-list.njk' %}
 	</main>
 
 {% endblock %}
