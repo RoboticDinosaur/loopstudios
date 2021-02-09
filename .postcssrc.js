@@ -12,10 +12,7 @@ const postcssConfig = {
 			]
 		}),
 		postcssPresetEnv({
-			stage: 1,
-			features: {
-				'nesting-rules': true,
-			}
+			stage: 0,
 		}),
 		postcssReporter({
 			clearReportedMessages: true

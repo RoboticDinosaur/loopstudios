@@ -4,8 +4,8 @@
 	"shortDescription": "",
 	"url": "https://localhost",
 	"analytics": {
-		"enabled": true,
-		"gaid": "xxxxxx"
+		"enabled": false,
+		"gaid": "X-XXXXXXXXXX"
 	},
 	"maxProjectsPerPage": 10
 }

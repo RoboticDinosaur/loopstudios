@@ -1,26 +1,24 @@
 {% set paginationLinkTokens = '' %}
 
 {% if paginationNextUrl or paginationPrevUrl %}
-	<div class="inner-wrapper">
-		<footer class="pagination">
-			<nav class="pagination__nav">
-				{% if paginationPrevUrl %}
-					<a class="button" href="{{ paginationPrevUrl }}" class="{{ paginationLinkTokens }}" data-direction="backwards">
-						<span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
-						{#
-							{% include 'icons/arrow.svg' %}
-						#}
-					</a>
-				{% endif %}
-				{% if paginationNextUrl %}
-					<a class="button" href="{{ paginationNextUrl }}" class="{{ paginationLinkTokens }}" data-direction="forwards">
-						<span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
-						{#
-							{% include 'icons/arrow.svg' %}
-						#}
-					</a>
-				{% endif %}
-			</nav>
-		</footer>
+	<div class="inner-wrapper pagination">
+		<nav class="pagination__nav">
+			{% if paginationPrevUrl %}
+				<a class="button" href="{{ paginationPrevUrl }}" class="{{ paginationLinkTokens }}" data-direction="backwards">
+					<span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+					{#
+						{% include 'icons/arrow.svg' %}
+					#}
+				</a>
+			{% endif %}
+			{% if paginationNextUrl %}
+				<a class="button" href="{{ paginationNextUrl }}" class="{{ paginationLinkTokens }}" data-direction="forwards">
+					<span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
+					{#
+						{% include 'icons/arrow.svg' %}
+					#}
+				</a>
+			{% endif %}
+		</nav>
 	</div>
 {% endif %}
