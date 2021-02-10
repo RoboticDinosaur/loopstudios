@@ -14,7 +14,7 @@
 	<li class="social__item">
 		<a href="{{ item.url }}" target="_blank" {{ titleAttribute | safe }}{{ relAttribute | safe }}>
 			{% if item.icon %}
-				<img src="{{ site.url | url }}{{ item.icon }}" />
+				<img src="{{ item.icon }}" />
 			{% endif %}
 		</a>
 	</li>

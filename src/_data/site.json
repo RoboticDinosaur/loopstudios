@@ -2,7 +2,7 @@
 	"name": "loopstudios",
 	"logo": "logo.svg",
 	"shortDescription": "",
-	"url": "http://localhost:8080",
+	"url": "http://roboticdinosaur-loopstudio.netlify.app",
 	"analytics": {
 		"enabled": false,
 		"gaid": "X-XXXXXXXXXX"
