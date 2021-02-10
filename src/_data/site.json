@@ -2,7 +2,7 @@
 	"name": "loopstudios",
 	"logo": "logo.svg",
 	"shortDescription": "",
-	"url": "https://roboticdinosaur.github.io/loopstudios",
+	"url": "http://localhost:8080",
 	"analytics": {
 		"enabled": false,
 		"gaid": "X-XXXXXXXXXX"

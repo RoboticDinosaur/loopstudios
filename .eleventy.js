@@ -19,10 +19,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addWatchTarget("./src/css/");
+	eleventyConfig.addWatchTarget("./src/css/");
+	eleventyConfig.addWatchTarget("./src/js/");
 
   eleventyConfig.addPassthroughCopy("./src/fonts");
-  eleventyConfig.addPassthroughCopy("./src/img");
+	eleventyConfig.addPassthroughCopy("./src/img");
+	eleventyConfig.addPassthroughCopy("./src/js");
   eleventyConfig.addPassthroughCopy("./src/favicon.png");
 
   eleventyConfig.addShortcode("packageVersion", () => `v${packageVersion}`);
