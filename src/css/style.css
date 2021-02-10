@@ -1,0 +1,28 @@
+@import 'base/reset.css';
+@import 'base/queries.css';
+@import 'base/color.css';
+@import 'base/typography';
+@import 'components/button.css';
+@import 'components/intro.css';
+@import 'components/navbar.css';
+@import 'components/pagination.css';
+@import 'components/project-list.css';
+@import 'components/social.css';
+@import 'layout/site-header.css';
+@import 'layout/site-footer.css';
+
+@import 'pages/index.css';
+
+#main-content {
+	& > section {
+
+		margin-top: 4.8rem;
+		margin-bottom: 4.8rem;
+		& > img {
+			margin-top: 4.8rem;
+			margin-bottom: 4.8rem;
+		}
+	}
+}
+
+

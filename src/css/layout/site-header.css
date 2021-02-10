@@ -1,0 +1,33 @@
+
+.site-header {
+	background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	padding: 2rem;
+
+	& .nav__toggle {
+		z-index: 20;
+	}
+
+	& .nav__list {
+		height: 0;
+	}
+}
+
+.site-header__scrolled {
+	background: black;
+	transition: all .2s;
+
+	@media (prefers-reduced-motion) {
+		transition: none;
+	}
+}
+
+.no-js {
+	& .site-header {
+		background: black;
+	}
+}

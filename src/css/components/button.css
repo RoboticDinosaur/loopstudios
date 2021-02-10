@@ -1,0 +1,20 @@
+.button {
+	border: 1px solid black;
+	font-size: 1.4rem;
+	letter-spacing: 5px;
+	padding: 1rem 2rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+
+	&:focus:hover {
+		background: black;
+		color: white;
+		transition: .2s all ease;
+
+		@media (prefers-reduced-motion) {
+			transition: none;
+		}
+	}
+}

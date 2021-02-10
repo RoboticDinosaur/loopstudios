@@ -1,0 +1,30 @@
+@import 'normalize.css/normalize.css';
+
+*,
+&::before,
+*::after {
+	box-sizing: border-box;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+html {
+	& body {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.inner-wrapper {
+	padding: 2rem;
+	max-width: 1111px;
+	margin: 8rem auto;
+}

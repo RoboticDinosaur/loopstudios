@@ -1,0 +1,29 @@
+.index {
+	& .blurb {
+		position: relative;
+	}
+
+	& .blurb__img {
+		max-width: 730px;
+	}
+
+	& .blurb__wrapper {
+		@media (--laptop) {
+			position: absolute;
+			padding: 2rem 2rem 0;
+			bottom: 0;
+			right: 0;
+			background: white;
+			max-width: 540px;
+		}
+	}
+
+	& .blurb__inner-wrapper {
+		padding-left: 4rem;
+		padding-top: 4rem;
+	}
+
+	& .blurb__heading {
+		margin-top: 0;
+	}
+}
