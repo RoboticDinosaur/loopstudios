@@ -8,7 +8,8 @@
 	text-align: center;
 	color: black;
 
-	&:focus:hover {
+	&:focus,
+	&:hover {
 		background: black;
 		color: white;
 		transition: .2s all ease;
