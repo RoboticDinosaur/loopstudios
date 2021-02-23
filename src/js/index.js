@@ -2,6 +2,8 @@
 console.log('Javascript Loaded');
 
 document.querySelector('body').classList.remove('no-js');
+const navItems = document.querySelectorAll('.navbar .nav__item');
+navItems.forEach( nav => nav.addEventListener('click', toggleNavbar));
 
 window.onscroll = () => {
 	scrollFunction();
@@ -15,4 +17,8 @@ function scrollFunction() {
 	}
 }
 
-
+function toggleNavbar() {
+	console.log('Toggle Navbar');
+	const checkbox = document.querySelector('.nav__check');
+	checkbox.checked = false;
+}
