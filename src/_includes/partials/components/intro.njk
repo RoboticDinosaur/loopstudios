@@ -1,7 +1,7 @@
 <header class="intro {{ 'intro--with-cover' }}">
 	{% if coverImage %}
 	<figure class="cover-image">
-		<img src="{{ coverImage }}" alt="{{ coverCaption }}" class="cover-image__img">
+		<img src="{{ site.url }}/{{ coverImage }}" alt="{{ coverCaption }}" class="cover-image__img">
 		{% if coverCaption %}<figcaption>{{ coverCaption | safe }}</figcaption>{% endif %}
 	</figure>
 	{% endif %}

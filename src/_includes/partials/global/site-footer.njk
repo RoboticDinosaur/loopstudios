@@ -7,7 +7,7 @@
 				{{ site.shortDescription | markdownFilter | safe }}
 			</article>
 			{% else %}
-				<img class="site-footer__logo" src="/img/{{ site.logo }}" />
+				<img class="site-footer__logo" src="{{ site.url }}/img/{{ site.logo }}" />
 			{% endif %}
 
 			{% set ariaLabel = 'footer navigation' %}
