@@ -19,6 +19,6 @@ function scrollFunction() {
 
 function toggleNavbar() {
 	console.log('Toggle Navbar');
-	const checkbox = document.querySelector('.nav__check');
+	const checkbox = document.querySelector('.nav-check');
 	checkbox.checked = false;
 }
