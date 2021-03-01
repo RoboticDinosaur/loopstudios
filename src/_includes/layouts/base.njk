@@ -8,7 +8,7 @@
 		<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml" />
     <link rel="icon" href="{{ site.faviconPath }}" type="image/png" />
 
-    <link href="{{ './css/style.css' | url }}" rel="stylesheet" />
+		<link href="{{ site.url }}{{ '/css/style.css' | url }}" rel="stylesheet" />
 
 		{% include 'partials/global/site-meta-info.njk' %}
 
@@ -35,6 +35,6 @@
 		{% block footer %}
 		{% endblock footer %}
 
-		<script src="/js/index.js"></script>
+		<script src="{{ site.url }}/js/index.js"></script>
   </body>
 </html>
