@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
 const emojiRegex = require("emoji-regex");
 const slugify = require("slugify");
@@ -12,7 +14,7 @@ const w3DateFilter = require('./src/_11ty/filters/w3-date-filter.js');
 
 const { configFunction } = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-const site = require('./src/_data/site.json');
+const site = require('./src/_data/site.js');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(socialImages);
