@@ -79,7 +79,8 @@
 	text-transform: uppercase;
 	background: linear-gradient(to right, hsla(0, 0%, 0%, .6), hsla(0, 0%, 0%, 0.01) 65%);
 
-	&:focus:hover {
+	&:focus,
+	&:hover {
 		background: hsla(0, 0%, 0%, .6);
 		transition: 0.2s all;
 
